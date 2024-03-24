@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Added new styles for improved design */
+.flex {
+  display: flex; /* Enable flexbox layout */
+}
+
+.justify-between {
+  justify-content: space-between; /* Align items horizontally */
+}
+
+.items-center {
+  align-items: center; /* Align items vertically */
+}
+
+.btn {
+  /* Basic button styling */
+  font-family: "Inter", sans-serif;
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-secondary {
+  /* Optional styling for "Sign In" button */
+  background-color: #000000;
+  font-size: 12px;
+  font-weight: 400;
+  border-color: #007bff;
+}
