@@ -8,151 +8,617 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/global.css" />
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="container">
-      <div class="flex justify-between items-center">
-        <img class="logo" src="../assets/images/logo.png"/>
-        <div class="years">
-          <img class="back_icon" src="../assets/images/back.png"/>
-          <ul style="display:inline;">
-          <li class="date"><a href="2014.html" class="ubuntu-light">2014</a></li>
-          <li class="date"><a href="2015.html" class="ubuntu-light">2015</a></li>
-          <li class="date"><a href="2016.html" class="ubuntu-light">2016</a></li>
-          <li class="date"><a href="2017.html" class="ubuntu-light">2017</a></li>
-          <li class="date"><a href="2018.html" class="ubuntu-light">2018</a></li>
-          <li class="date"><a href="2019.html" class="ubuntu-light">2019</a></li>
-          <li class="date"><a href="2020.html" class="ubuntu-light">2020</a></li>
-          <li class="date"><a href="2021.html" class="ubuntu-light">2021</a></li>
-          <li class="date"><a href="2022.html" class="ubuntu-light">2022</a></li>
-          <li class="date"><a href="2023.html" class="ubuntu-light">2023</a></li>
-          <li class="date"><a href="2024.html" class="ubuntu-light">2024</a></li>
-          </ul>
-          <img class="back_icon" src="../assets/images/next.png"/>
-        </div>
+      <div class="flex justify-between header">
+        <img class="logo" src="../assets/images/logo.png" />
         <a href="login.html" class="btn btn-secondary">Sign in</a>
       </div>
-      <div class="months">
-        <ul>
-          <li class="date"><a href="2014.html" class="ubuntu-light">1 сар</a></li>
-          <li class="date"><a href="2015.html" class="ubuntu-light">2 сар</a></li>
-          <li class="date"><a href="2016.html" class="ubuntu-light">3 сар</a></li>
-          <li class="date"><a href="2017.html" class="ubuntu-light">4 сар</a></li>
-          <li class="date"><a href="2018.html" class="ubuntu-light">5 сар</a></li>
-          <li class="date"><a href="2019.html" class="ubuntu-light">6 сар</a></li>
-          <li class="date"><a href="2020.html" class="ubuntu-light">7 сар</a></li>
-          <li class="date"><a href="2021.html" class="ubuntu-light">8 сар</a></li>
-          <li class="date"><a href="2022.html" class="ubuntu-light">9 сар</a></li>
-          <li class="date"><a href="2023.html" class="ubuntu-light">10 сар</a></li>
-          <li class="date"><a href="2024.html" class="ubuntu-light">11 сар</a></li>
-          <li class="date"><a href="2024.html" class="ubuntu-light">12 сар</a></li>
+      <div class="swiper years">
+        <ul class="swiper-wrapper">
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2012</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2013</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2014</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2015</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2016</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2017</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2018</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2019</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2020</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2021</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-bold">2022</a>
+          </li>
         </ul>
+        <div class="swipe-button-prev">
+          <i class="fas fa-chevron-left fa-xs"></i>
+        </div>
+        <div class="swipe-button-next">
+          <i class="fas fa-chevron-right fa-xs"></i>
+        </div>
+      </div>
+      <div class="months swiper">
+        <ul class="swiper-wrapper">
+          <li class="date swiper-slide">
+            <a href="2014.html" class="ubuntu-light">1 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2015.html" class="ubuntu-light">2 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2016.html" class="ubuntu-light">3 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2017.html" class="ubuntu-light">4 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2018.html" class="ubuntu-light">5 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2019.html" class="ubuntu-light">6 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2020.html" class="ubuntu-light">7 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2021.html" class="ubuntu-light">8 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2022.html" class="ubuntu-light">9 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2023.html" class="ubuntu-light">10 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2024.html" class="ubuntu-light">11 сар</a>
+          </li>
+          <li class="date swiper-slide">
+            <a href="2024.html" class="ubuntu-light">12 сар</a>
+          </li>
+        </ul>
+        <div class="swipe-button-prev">
+          <i class="fas fa-chevron-left fa-xs"></i>
+        </div>
+        <div class="swipe-button-next">
+          <i class="fas fa-chevron-right fa-xs"></i>
+        </div>
       </div>
     </header>
     <main class="container">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">
-        <p class="ubuntu-mono-bold" style="font-size: 26px;">Эрэлттэй сэдэв</p>
-        <div class="row8" style="float: left;">
-            <div class="trend_news" >
-            <p class="ubuntu-mono-bold" id="status" style="color:white; padding-top: 300px;"><img src="../assets/images/red_dot.png" class="status" >Шийдэгдээгүй | 2023-11-23</p></br>
-            <p class="ubuntu-mono-bold" id="big_title"> Дуусдаггүй Дарханы замын бүтээн байгуулалтын 6 жилийн ой </p>
+      <h1 class="title">Эрэлттэй сэдэв</h1>
+      <section class="trend__news__container">
+        <article class="trend__news">
+          <figure>
+            <img
+              class="trend__news__img"
+              src="../assets/images/news.png"
+              alt=""
+            />
+          </figure>
+          <div class="trend__title__container">
+            <div class="ubuntu-mono-bold flex items-center">
+              <div class="status-icon red"></div>
+              <p class="status lg">
+                Шийдэгдээгүй <span style="margin: 0px 5px"> | </span> 2024-11-23
+              </p>
             </div>
+            <p class="ubuntu-mono-bold trend__title">
+              Дуусдаггүй Дарханы замын бүтээн байгуулалтын 6 жилийн ой
+            </p>
+          </div>
+        </article>
+        <section class="sub__news__container">
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon green"></div>
+                <p class="status sm news">
+                  Шийдэгдсэн <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon red"></div>
+                <p class="status sm news">
+                  Шийдэгдээгүй
+                  <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon red"></div>
+                <p class="status sm news">
+                  Шийдэгдсэн <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon green"></div>
+                <p class="status sm news">
+                  Шийдэгдсэн <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+        </section>
+      </section>
+      <section class="title flex items-center">
+        <h1 class="daily__title">Эл өдөр</h1>
+        <div class="daily__status flex items-center">
+          <div class="status-icon red"></div>
+          <p class="status lg daily">
+            Шийдэгдээгүй <span style="margin: 0px 5px"> 10 </span>
+          </p>
         </div>
-        <div class="row4" style="float: right; margin-top: 15px;">
-          <div class="small_news">
+        <div class="daily__status flex items-center">
+          <div class="status-icon green"></div>
+          <p class="status lg daily">
+            Шийдэгдсэн <span style="margin: 0px 5px"> 7 </span>
+          </p>
+        </div>
+      </section>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon green"></div>
+                <p class="status sm news">
+                  Шийдэгдсэн <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon green"></div>
+                <p class="status sm news">
+                  Шийдэгдсэн <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+          <article class="news flex">
+            <figure>
+              <img class="news__img" src="../assets/images/news1.png" />
+            </figure>
+            <div>
+              <div class="ubuntu-mono-bold flex items-center">
+                <div class="status-icon green"></div>
+                <p class="status sm news">
+                  Шийдэгдсэн <span style="margin: 0px 5px"> | </span> 2024-11-23
+                </p>
+              </div>
+              <p class="ubuntu-mono-bold news__title">
+                Дууссан 2024 оны үндэсний хөгжлийн төлөвлөгөө
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!-- <div class="row4"">
+        <div class="small__news">
           <img class="small" src="../assets/images/news1.png">
           <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
           <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 25px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
+        </div>
+        <div class="small__news">
+          <img class="small" src="../assets/images/news2.png">
+          <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
+          <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 25px;">Despite economic growth, poverty and inequality persist, especially in rural areas where access to basic services and infrastructure ... </p>
+        </div>
+        <div class="small__news">
+          <img class="small" src="../assets/images/news3.png">
+          <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
+          <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 25px;">Corruption remains a significant issue in Mongolia, affecting various sectors, including politics, business, and law enforcement. This ... </p>
+        </div>
+        <div class="small__news">
+          <img class="small" src="../assets/images/news4.png">
+          <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
+          <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
+        </div>
+      </div> -->
+
+      <!-- <div class="news_date">
+        <div class="news_date_details">
+          <p style="font-size: 30px; float: left; margin-top: -10px">ЭЛ ӨДӨР</p>
+          <p class="ubuntu-mono-bold" id="status" style="float: left">
+            <img
+              src="../assets/images/red_dot.png"
+              class="status"
+              style="float: left; color: black"
+            />Шийдэгдээгүй 15
+          </p>
+          <p class="ubuntu-mono-bold" id="status" style="float: left">
+            <img
+              src="../assets/images/green_dot.png"
+              class="status"
+              style="float: left; color: black"
+            />Шийдэгдсэн 7
+          </p>
+          <br /><br />
+          <hr />
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/green_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдсэн | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
           </div>
-          <div class="small_news">
-            <img class="small" src="../assets/images/news2.png">
-            <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
-            <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 25px;">Despite economic growth, poverty and inequality persist, especially in rural areas where access to basic services and infrastructure ... </p>
-            </div>
-            <div class="small_news">
-              <img class="small" src="../assets/images/news3.png">
-              <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-              <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 25px;">Corruption remains a significant issue in Mongolia, affecting various sectors, including politics, business, and law enforcement. This ... </p>
-              </div>
-              
-            <div class="small_news">
-              <img class="small" src="../assets/images/news4.png">
-              <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
-              <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-            </div>
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/red_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдээгүй | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/red_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдээгүй | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
         </div>
-        <div class="news_date">
-            <div class="news_date_details">
-              <p style="font-size: 30px; float: left; margin-top: -10px;">ЭЛ ӨДӨР</p>
-              <p class="ubuntu-mono-bold" id="status" style="float: left;"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй  15</p>
-              <p class="ubuntu-mono-bold" id="status" style="float: left;"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн  7</p>
-              <br><br><hr>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-            </div>
-            <div class="news_date_details">
-              <p style="font-size: 30px; float: left; margin-top: -10px;">ЭНЭ 7 ХОНОГ</p>
-              <p class="ubuntu-mono-bold" id="status" style="float: left;"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй  15</p>
-              <p class="ubuntu-mono-bold" id="status" style="float: left;"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн  7</p>
-              <br><br><hr>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-            </div>
-            <div class="news_date_details">
-              <p style="font-size: 30px; float: left; margin-top: -10px;">ЭНЭ САР</p>
-              <p class="ubuntu-mono-bold" id="status" style="float: left;"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй  15</p>
-              <p class="ubuntu-mono-bold" id="status" style="float: left;"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн  7</p>
-              <br><br><hr>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/green_dot.png" class="status" style="float: left; color: black; ">Шийдэгдсэн | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-              <div class="small_news" style="float: left; width: 400px; margin-left:30px ;">
-                <img class="small" src="../assets/images/news4.png">
-                <p class="ubuntu-mono-bold" id="status"><img src="../assets/images/red_dot.png" class="status" style="float: left; color: black; ">Шийдэгдээгүй | 2024-03-07</p>
-                <p class="ubuntu-mono-bold" style="font-size: 16px; font-weight: 100; margin-top: 20px;">Mongolia's economy heavily relies on mining, particularly coal, copper, and gold. Dependency on the mining sector makes the economy ... </p>
-              </div>
-            </div>
+        <div class="news_date_details">
+          <p style="font-size: 30px; float: left; margin-top: -10px">
+            ЭНЭ 7 ХОНОГ
+          </p>
+          <p class="ubuntu-mono-bold" id="status" style="float: left">
+            <img
+              src="../assets/images/red_dot.png"
+              class="status"
+              style="float: left; color: black"
+            />Шийдэгдээгүй 15
+          </p>
+          <p class="ubuntu-mono-bold" id="status" style="float: left">
+            <img
+              src="../assets/images/green_dot.png"
+              class="status"
+              style="float: left; color: black"
+            />Шийдэгдсэн 7
+          </p>
+          <br /><br />
+          <hr />
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/green_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдсэн | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/red_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдээгүй | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/red_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдээгүй | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
         </div>
+        <div class="news_date_details">
+          <p style="font-size: 30px; float: left; margin-top: -10px">ЭНЭ САР</p>
+          <p class="ubuntu-mono-bold" id="status" style="float: left">
+            <img
+              src="../assets/images/red_dot.png"
+              class="status"
+              style="float: left; color: black"
+            />Шийдэгдээгүй 15
+          </p>
+          <p class="ubuntu-mono-bold" id="status" style="float: left">
+            <img
+              src="../assets/images/green_dot.png"
+              class="status"
+              style="float: left; color: black"
+            />Шийдэгдсэн 7
+          </p>
+          <br /><br />
+          <hr />
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/green_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдсэн | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/red_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдээгүй | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
+          <div
+            class="small__news"
+            style="float: left; width: 400px; margin-left: 30px"
+          >
+            <img class="small" src="../assets/images/news4.png" />
+            <p class="ubuntu-mono-bold" id="status">
+              <img
+                src="../assets/images/red_dot.png"
+                class="status"
+                style="float: left; color: black"
+              />Шийдэгдээгүй | 2024-03-07
+            </p>
+            <p
+              class="ubuntu-mono-bold"
+              style="font-size: 16px; font-weight: 100; margin-top: 20px"
+            >
+              Mongolia's economy heavily relies on mining, particularly coal,
+              copper, and gold. Dependency on the mining sector makes the
+              economy ...
+            </p>
+          </div>
+        </div>
+      </div> -->
     </main>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/8ea97053dc.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    var swiper = new Swiper(".years", {
+      direction: "horizontal",
+      slidesPerView: 10,
+      spaceBetween: 50,
+      navigation: {
+        nextEl: ".swipe-button-next",
+        prevEl: ".swipe-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 8,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 10,
+          spaceBetween: 50,
+        },
+      },
+    });
+    var swiper = new Swiper(".months", {
+      direction: "horizontal",
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      navigation: {
+        nextEl: ".swipe-button-next",
+        prevEl: ".swipe-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 6,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 9,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 12,
+          spaceBetween: 30,
+        },
+      },
+    });
+  </script>
 </html>

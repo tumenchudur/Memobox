@@ -1,0 +1,106 @@
+/* import variables.css */
+
+@import "_variables.css";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: var(--spacing-5) 0;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Added new styles for improved design */
+.flex {
+  display: flex; /* Enable flexbox layout */
+}
+
+.justify-between {
+  justify-content: space-between; /* Align items horizontally */
+}
+
+.items-center {
+  align-items: center; /* Align items vertically */
+}
+.justify-center {
+  justify-content: center; /* Align items horizontally */
+}
+.flex-col {
+  flex-direction: column; /* Align items vertically */
+}
+.flex-row {
+  flex-direction: row; /* Align items horizontally */
+}
+.flex-wrap {
+  flex-wrap: wrap; /* Wrap items */
+}
+
+.swiper {
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+}
+.swiper-wrapper {
+  padding: 0 15px !important;
+}
+.icon-4 {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.icon-2 {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+.swipe-button-next,
+.swipe-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  color: var(--grey500);
+}
+.swipe-button-next:hover,
+.swipe-button-prev:hover {
+  color: var(--grey700);
+  transition: color 0.3s ease;
+}
+.swipe-button-next {
+  right: 0;
+}
+.swipe-button-prev {
+  left: 0;
+}
+.ubuntu-bold {
+  font-weight: var(--semi-bold);
+  font-size: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  white-space: nowrap;
+}
+.ubuntu-light {
+  font-weight: var(--normals);
+  font-size: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  white-space: nowrap;
+}
+.ubuntu-mono-bold {
+  font-weight: 700;
+  font-style: normal;
+}
