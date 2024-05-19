@@ -30,6 +30,37 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+    <style>
+      .comment {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .comment .author {
+        font-weight: bold;
+        color: var(--dark);
+        margin-bottom: 5px;
+      }
+
+      .comment .text {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .comment .timestamp {
+        font-size: 12px;
+        color: #666;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 5px;
+      }
+    </style>
   </head>
   <body>
     <header class="container">
@@ -169,7 +200,7 @@
             />
           </figure>
 
-          <div style="margin-top: 50px">
+          <div style="margin-top: 50px; margin-bottom: 50px">
             <p>
               Нийслэлд газ ачиж явсан машин суудлын автомашинтай мөргөлдөж
               дэлбэрсэн явдал боллоо. Тус дэлбэрэлтэд олон иргэн эрүүл мэнд, эд
@@ -184,6 +215,76 @@
               гаруй албан хаагч 25 тээврийн хэрэгсэлтэйгээр ажиллаж галыг
               унтраасан. Ойр хавьд эрэн хайх ажиллагааг үргэлжлүүлж байна” гэв.
             </p>
+          </div>
+
+          <h1 class="daily__title">Сэтгэгдлүүд (1)</h1>
+
+          <form action="#">
+            <textarea
+              class="comment-input"
+              rows="5"
+              placeholder="Сэтгэгдэл үлдээх..."
+              style="
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+                font-size: 16px;
+                margin-bottom: 20px;
+              "
+            ></textarea>
+
+            <button
+              style="
+                padding: 10px;
+                border-radius: 10px;
+                font-size: medium;
+                font-weight: var(--semi-bold);
+              "
+              class="btn btn-secondary"
+            >
+              Илгээх
+            </button>
+          </form>
+
+          <div
+            style="
+              width: 100%;
+              height: 2px;
+              background-color: #ccc;
+              margin-top: 50px;
+              margin-bottom: 50px;
+            "
+          ></div>
+
+          <div
+            class="comment"
+            style="
+              background-color: #fff;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              padding: 10px;
+              margin-bottom: 20px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            "
+          >
+            <div class="author">John Doe</div>
+            <div class="text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
+              sem a est molestie bibendum. Nulla facilisi. Proin mollis justo eu
+              augue posuere, et efficitur justo consectetur. Morbi nec malesuada
+              eros. Suspendisse potenti. Nulla facilisi. Integer eleifend felis
+              nec turpis consectetur vestibulum.
+            </div>
+            <div class="timestamp">
+              <img
+                src="../assets/icons/date.svg"
+                alt="Date SVG"
+                style="height: 20px; width: 20px; border-radius: 50%"
+              />
+              <p>2024-11-23-д нийтлэсэн</p>
+            </div>
           </div>
         </article>
 
@@ -257,6 +358,51 @@
         </section>
       </section>
     </main>
+    <footer class="container" style="border-top: 1px solid var(--dark)">
+      <div class="flex justify-between header">
+        <a href="index.html">
+          <img class="logo" src="../assets/images/logo.png" />
+        </a>
+
+        <div style="display: flex; gap: 10px; flex-direction: column">
+          <div style="display: flex; justify-items: items; gap: 10px">
+            <img
+              style="width: 20px; height: 20px"
+              src="../assets/icons/pin.svg"
+            />
+
+            <p style="font-size: small; font-weight: var(--semi-bold)">
+              Сүхбаатар дүүрэг 6-р хороо , бага тойруу , Ж . Самбуугийн гудамж 6
+              тоот
+            </p>
+          </div>
+          <div style="display: flex; justify-items: center; gap: 10px">
+            <img
+              style="width: 20px; height: 20px"
+              src="../assets/icons/phone.svg"
+            />
+
+            <p style="font-size: small; font-weight: var(--semi-bold)">
+              9909-3223
+            </p>
+          </div>
+          <div style="display: flex; justify-items: center; gap: 10px">
+            <img
+              style="width: 20px; height: 20px"
+              src="../assets/icons/mail.svg"
+            />
+
+            <p style="font-size: small; font-weight: var(--semi-bold)">
+              info@memobox.mn
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: small">
+        © Зохиогчийн эрх хуулиар хамгаалагдсан. Мэдээлэл хуулбарлах хориотой
+      </p>
+    </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
