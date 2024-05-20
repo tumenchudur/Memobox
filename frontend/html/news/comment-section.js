@@ -3,11 +3,8 @@ class CommentSection extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
+            <style id="external-styles"></style>
             <style>
-                :host {
-                    display: block;
-                    margin-top: 50px;
-                }
                 .comment-input {
                     width: 100%;
                     padding: 10px;
@@ -17,14 +14,6 @@ class CommentSection extends HTMLElement {
                     font-size: 16px;
                     margin-bottom: 20px;
                 }
-                .btn {
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    background-color: #007bff;
-                    color: white;
-                    cursor: pointer;
-                }
                 .comment {
                     background-color: var(--bg-color);
                     border: 1px solid #ccc;
@@ -32,6 +21,9 @@ class CommentSection extends HTMLElement {
                     padding: 10px;
                     margin-bottom: 20px;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+                .comments {
+                    margin: 20px 0px;
                 }
                 .author {
                     font-weight: bold;
@@ -62,7 +54,7 @@ class CommentSection extends HTMLElement {
                         <div class="author">John Doe</div>
                         <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec varius nunc.</div>
                         <div class="timestamp">
-                            <img src="../assets/icons/time.svg" alt="Time">
+                            <img src="../../assets/icons/date.svg" alt="Date">
                             <span>2024-11-23 15:45</span>
                         </div>
                     </div>
@@ -79,7 +71,22 @@ class CommentSection extends HTMLElement {
         this.addComment();
       });
 
+    this.loadExternalStyles();
     this.updateCommentCount();
+  }
+
+  async loadExternalStyles() {
+    try {
+      const baseCssResponse = await fetch("../css/base.css");
+      const indexCssResponse = await fetch("../css/index.css");
+      const baseCssText = await baseCssResponse.text();
+      const indexCssText = await indexCssResponse.text();
+      this.shadowRoot.querySelector(
+        "#external-styles"
+      ).textContent = `${baseCssText}\n${indexCssText}`;
+    } catch (error) {
+      console.error("Error loading external styles:", error);
+    }
   }
 
   addComment() {

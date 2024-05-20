@@ -3,36 +3,45 @@ class NewsPage extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
+            <style id="external-styles"></style>
             <style>
-                :host {
-                    --bg-color: white;
-                    --text-color: black;
-                    background-color: var(--bg-color);
-                    color: var(--text-color);
-                    display: block;
-                    padding: 20px;
-                    font-family: 'Inter', sans-serif;
+                // :host {
+                //     --bg-color: white;
+                //     --text-color: black;
+                //     background-color: var(--bg-color);
+                //     color: var(--text-color);
+                //     display: block;
+                //     padding: 20px;
+                //     font-family: 'Inter', sans-serif;
+                // }
+                // :host([dark-mode]) {
+                //     --bg-color: #333;
+                //     --text-color: white;
+                // }
+                // header{
+                //     display: flex;
+                //     justify-content: space-between;
+                // }
+
+                footer {
+                   border-top: 1px solid var(--dark); 
+                   margin-top: 50px;
                 }
-                :host([dark-mode]) {
-                    --bg-color: #333;
-                    --text-color: white;
-                }
-                .container {
-                    max-width: 1200px;
-                    margin: 0 auto;
-                }
-                header, footer {
+
+                .footer-list {
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    flex-direction: column;
+                    gap: 20px;
                 }
+
+                .footer-asset {
+                    display: flex;
+                    gap: 10px;
+                }
+                
                 .logo {
-                    height: 50px;
-                }
-                .title {
-                    font-size: 24px;
-                    font-weight: bold;
-                    margin: 20px 0;
+                    width: 150px;
+                    height: 55px;
                 }
                 .comment-input {
                     width: 100%;
@@ -42,17 +51,6 @@ class NewsPage extends HTMLElement {
                     box-sizing: border-box;
                     font-size: 16px;
                     margin-bottom: 20px;
-                }
-                .btn {
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    background-color: #007bff;
-                    color: white;
-                    cursor: pointer;
-                }
-                .btn-secondary {
-                    background-color: #6c757d;
                 }
                 .comment {
                     background-color: var(--bg-color);
@@ -80,14 +78,18 @@ class NewsPage extends HTMLElement {
                     gap: 5px;
                 }
             </style>
-            <div class="container">
-                <header>
-                    <a href="index.html">
-                        <img class="logo" src="../assets/images/logo.png" alt="Logo">
-                    </a>
-                    <a href="login.html" class="btn btn-secondary">Нэвтрэх</a>
+            <div class="">
+                <header class="container">
+                    <div class="flex justify-between header">
+                        <a href="index.html">
+                            <img class="logo" src="../assets/images/logo.png" />
+                        </a>
+                        <a href="login.html" class="btn btn-secondary">Нэвтрэх</a>
+                    </div>
                 </header>
-                <main>
+                
+                
+                <main class="container">
                     <h1 class="title">Дуусдаггүй Дарханы замын бүтээн байгуулалтын 6 жилийн ой</h1>
                     <article>
                         <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
@@ -111,36 +113,80 @@ class NewsPage extends HTMLElement {
                     </article>
                     <comment-section></comment-section>
                 </main>
-                <footer>
-                    <a href="index.html">
-                        <img class="logo" src="../assets/images/logo.png" alt="Logo">
-                    </a>
-                    <div>
-                        <div>
-                            <img src="../assets/icons/pin.svg" alt="Address">
-                            <p>Сүхбаатар дүүрэг 6-р хороо , бага тойруу , Ж . Самбуугийн гудамж 6 тоот</p>
+                <footer
+                    class="container"
+                    style="border-top: 1px solid var(--dark); margin-top: 50px"
+                    >
+                        <div class="flex justify-between header">
+                            <a href="index.html">
+                            <img class="logo" src="../assets/images/logo.png" />
+                            </a>
+
+                            <div style="display: flex; gap: 10px; flex-direction: column">
+                            <div style="display: flex; justify-items: items; gap: 10px">
+                                <img
+                                style="width: 20px; height: 20px"
+                                src="../assets/icons/pin.svg"
+                                />
+
+                                <p style="font-size: small; font-weight: var(--semi-bold)">
+                                Сүхбаатар дүүрэг 6-р хороо , бага тойруу , Ж . Самбуугийн гудамж 6
+                                тоот
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-items: center; gap: 10px">
+                                <img
+                                style="width: 20px; height: 20px"
+                                src="../assets/icons/phone.svg"
+                                />
+
+                                <p style="font-size: small; font-weight: var(--semi-bold)">
+                                9909-3223
+                                </p>
+                            </div>
+                            <div style="display: flex; justify-items: center; gap: 10px">
+                                <img
+                                style="width: 20px; height: 20px"
+                                src="../assets/icons/mail.svg"
+                                />
+
+                                <p style="font-size: small; font-weight: var(--semi-bold)">
+                                info@memobox.mn
+                                </p>
+                            </div>
+                            </div>
                         </div>
-                        <div>
-                            <img src="../assets/icons/phone.svg" alt="Phone">
-                            <p>9909-3223</p>
-                        </div>
-                        <div>
-                            <img src="../assets/icons/mail.svg" alt="Mail">
-                            <p>info@memobox.mn</p>
-                        </div>
-                    </div>
-                </footer>
+
+                        <p style="font-size: small">
+                            © Зохиогчийн эрх хуулиар хамгаалагдсан. Мэдээлэл хуулбарлах хориотой
+                        </p>
+                    </footer>
             </div>
         `;
   }
 
   connectedCallback() {
     this.fetchData();
+    this.loadExternalStyles();
   }
 
   fetchData() {
     // Placeholder for fetching data
     console.log("Fetching data...");
+  }
+
+  async loadExternalStyles() {
+    try {
+      const baseCssResponse = await fetch("../css/_base.css");
+      const indexCssResponse = await fetch("../css/index.css");
+      const baseCssText = await baseCssResponse.text();
+      const indexCssText = await indexCssResponse.text();
+      this.shadowRoot.querySelector(
+        "#external-styles"
+      ).textContent = `${baseCssText}\n${indexCssText}`;
+    } catch (error) {
+      console.error("Error loading external styles:", error);
+    }
   }
 }
 
