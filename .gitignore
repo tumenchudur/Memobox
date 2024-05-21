@@ -1,33 +1,7 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-*.swp
 
-*.jpg
-
-pids
-logs
-# results
-tmp
-
-# Coverage reports
-coverage
-
-# API keys and secrets
-.env
-
-# Dependency directory
 node_modules
-bower_components
 
-# Build files
-build
-dist
+
 
 # Local development
 *.env
@@ -39,22 +13,3 @@ dist
 # Package files
 package-lock.json
 yarn.lock
-
-# Editors
-.idea
-*.iml
-
-# OS metadata
-.DS_Store
-Thumbs.db
-
-# Ignore built ts files
-dist/
-dist/**/*
-
-# Test report
-.nyc_output/
-
-bkp/
-
-pdf
