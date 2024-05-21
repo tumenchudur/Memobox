@@ -146,8 +146,8 @@ class NewsPage extends HTMLElement {
 
   async loadExternalStyles() {
     try {
-      const baseCssResponse = await fetch("../css/_base.css");
-      const indexCssResponse = await fetch("../css/index.css");
+      const baseCssResponse = await fetch("../../css/_base.css");
+      const indexCssResponse = await fetch("../../css/index.css");
       const baseCssText = await baseCssResponse.text();
       const indexCssText = await indexCssResponse.text();
       this.shadowRoot.querySelector(
