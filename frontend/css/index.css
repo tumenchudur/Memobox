@@ -24,7 +24,7 @@ body {
 .btn {
   font-family: "Inter", sans-serif;
   max-height: min-content;
-  padding: 10px 15px;
+  padding: 0px 15px;
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -199,6 +199,11 @@ hr {
 
 @media (max-width: 1023px) {
   /* To Large Screens */
+
+    .trend__news {
+      width: 100%;
+    }
+  
   .trend__news__container {
     flex-direction: column;
     align-items: center;
@@ -211,6 +216,18 @@ hr {
   }
   .news {
     flex-direction: column;
+    width: 100%;
+  }
+  .title.flex.items-center{
+    margin-top: 320px;
+  }
+  .swiper-wrapper div {
+    width: 50%;
+  }
+  .swiper-wrapper .news.flex {
+    flex-direction: row;
+    width: 75%;
+    margin-right: 20px;
   }
 }
 @media (max-width: 900px) {
@@ -230,25 +247,32 @@ hr {
   }
   .trend__news {
     height: 400px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Medium Screens */
-  .trend__news {
     width: 100%;
   }
+  .trend__news__container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .title.flex.items-center{
+    margin-top: 450px;
+  }
+  .swiper-wrapper div {
+    width: 75%;
+  }
+  .swiper-wrapper .news.flex {
+    flex-direction: column;
+    width: 75%;
+    margin-right: 20px;
+  }
+}
 
-  .news {
-    width: 100%;
-  }
-}
 
 @media (max-width: 767px) {
   /* Small Screens */
   .title {
     margin-top: var(--spacing-8);
     font-size: var(--spacing-6);
-    line-height: var(--spacing-);
+    line-height: var(--spacing-12);
   }
   .trend__news {
     width: 100%;
@@ -272,5 +296,16 @@ hr {
   .status-icon {
     width: 8px;
     height: 8px;
+  }
+  .title.flex.items-center+.swiper .swiper-wrapper{
+    flex-direction: column;
+  }
+  .swiper-wrapper .news.flex {
+    flex-direction: row;
+    width: 75%;
+    margin-right: 20px;
+  }
+  .flex.justify-between.header a{
+    margin-right:20px ;
   }
 }
