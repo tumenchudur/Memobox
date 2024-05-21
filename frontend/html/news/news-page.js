@@ -130,7 +130,7 @@ class NewsPage extends HTMLElement {
   }
 
   async fetchData() {
-    const API_URL = process.env.API_URL;
+    const API_URL = window.env.API_URL;
     try {
       const response = await fetch(`${API_URL}/category`);
       if (!response.ok) {
