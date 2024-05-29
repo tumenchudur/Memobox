@@ -1,0 +1,28 @@
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+
+.npm
+
+.eslintcache
+
+.env
+
+.DS_Store
+
+Thumbs.db
+
+.idea
+.vscode
+
+package-lock.json
+yarn.lock
