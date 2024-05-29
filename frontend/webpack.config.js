@@ -1,10 +1,12 @@
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  // other webpack configuration...
-  plugins: [new Dotenv()],
+  // Your entry point
+  entry: "./src/index.js",
+  // Output configuration
   output: {
-    filename: "my-bundle.js", // Adjust the filename as needed
-    path: path.resolve(__dirname, "dist"), // Output directory path
+    path: __dirname + "/dist",
+    filename: "bundle.js",
   },
+  plugins: [new Dotenv()],
 };
