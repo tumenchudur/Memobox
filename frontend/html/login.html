@@ -6,12 +6,11 @@
     <title>Memobox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../css/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
       rel="stylesheet"
@@ -24,71 +23,89 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/index.css" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+      .title {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      main {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        padding: 0 15px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        max-width: 500px;
+        height: 40px;
+        border-radius: 20px;
+        border: 1px solid var(--dark);
+        padding: 20px;
+        font-size: large;
+        font-weight: var(--semi-bold);
+      }
+
+      button {
+        width: max-content;
+        border-radius: 20px;
+        border: 1px solid var(--dark);
+        background-color: var(--dark);
+        color: white;
+        font-size: large;
+        font-weight: var(--semi-bold);
+        padding: 10px 25px;
+      }
+
+      @media (max-width: 768px) {
+        input[type="text"] {
+          width: 100%;
+          max-width: none;
+        }
+
+        button {
+          width: 100%;
+          padding: 10px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="container">
       <div class="flex justify-between header">
-        <a href="index.html">
+        <a href="../index.html">
           <img class="logo" src="../assets/images/logo.png" />
         </a>
         <a href="login.html" class="btn btn-secondary">Нэвтрэх</a>
       </div>
     </header>
-    <main
-      class="container"
-      style="
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      "
-    >
+    <main class="container">
       <section>
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-          "
-        >
-          <h1 class="title" style="padding: 0">Нэвтрэх</h1>
-
-          <div style="display: flex; align-items: center; gap: 20px">
-            <input
-              type="text"
-              style="
-                width: 500px;
-                height: 40px;
-                border-radius: 20px;
-                border: 1px solid var(--dark);
-                padding: 20px;
-                font-size: large;
-                font-weight: var(--semi-bold);
-              "
-              placeholder="Утасны дугаар"
-            />
-
+        <div>
+          <h1 class="title">Нэвтрэх</h1>
+          <div style="display: flex; align-items: center; flex-wrap: wrap">
+            <input type="text" id="phoneNumber" placeholder="Утасны дугаар" />
             <button
-              style="
-                width: max-content;
-                border-radius: 20px;
-                border: 1px solid var(--dark);
-                background-color: var(--dark);
-                color: white;
-                font-size: large;
-                font-weight: var(--semi-bold);
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-right: 25px;
-                padding-left: 25px;
-              "
+              class="btn btn-secondary"
+              style="margin-top: 50px; background-color: black"
+              onclick="sendCode()"
             >
               Код авах
             </button>
@@ -96,58 +113,72 @@
         </div>
       </section>
     </main>
-    <footer
-      class="container"
-      style="border-top: 1px solid var(--dark); margin-top: 50px"
-    >
-      <div class="flex justify-between header">
+    <footer class="container">
+      <div class="footer">
         <a href="index.html">
           <img class="logo" src="../assets/images/logo.png" />
         </a>
-
         <div style="display: flex; gap: 10px; flex-direction: column">
-          <div style="display: flex; justify-items: items; gap: 10px">
+          <div style="display: flex; align-items: center; gap: 10px">
             <img
               style="width: 20px; height: 20px"
               src="../assets/icons/pin.svg"
             />
-
             <p style="font-size: small; font-weight: var(--semi-bold)">
               Сүхбаатар дүүрэг 6-р хороо , бага тойруу , Ж . Самбуугийн гудамж 6
               тоот
             </p>
           </div>
-          <div style="display: flex; justify-items: center; gap: 10px">
+          <div style="display: flex; align-items: center; gap: 10px">
             <img
               style="width: 20px; height: 20px"
               src="../assets/icons/phone.svg"
             />
-
             <p style="font-size: small; font-weight: var(--semi-bold)">
               9909-3223
             </p>
           </div>
-          <div style="display: flex; justify-items: center; gap: 10px">
+          <div style="display: flex; align-items: center; gap: 10px">
             <img
               style="width: 20px; height: 20px"
               src="../assets/icons/mail.svg"
             />
-
             <p style="font-size: small; font-weight: var(--semi-bold)">
               info@memobox.mn
             </p>
           </div>
         </div>
       </div>
-
       <p style="font-size: small">
         © Зохиогчийн эрх хуулиар хамгаалагдсан. Мэдээлэл хуулбарлах хориотой
       </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8ea97053dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function sendCode() {
+        const phoneNumber = document.getElementById("phoneNumber").value;
+
+        fetch("YOUR_BACKEND_ENDPOINT", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ phone: phoneNumber }),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            // Handle success response
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            // Handle error response
+          });
+      }
+    </script>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script
-    src="https://kit.fontawesome.com/8ea97053dc.js"
-    crossorigin="anonymous"
-  ></script>
 </html>
