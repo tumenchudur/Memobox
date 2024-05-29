@@ -1,5 +1,5 @@
-@import "_variables.css";
-@import "_base.css";
+@import url("../css/_variables.css");
+@import url("../css/_base.css");
 
 * {
   margin: 0;
@@ -24,7 +24,7 @@ body {
 .btn {
   font-family: "Inter", sans-serif;
   max-height: min-content;
-  padding: 0px 15px;
+  padding: 10px 15px;
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -34,12 +34,18 @@ body {
 }
 
 .btn-secondary {
-  background-color: #000000;
-  font-size: 12px;
-  font-weight: 400;
+  background-color: var(--dark);
+  font-size: var(--spacing-3);
+  font-weight: var(--normal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--dark-hover);
+  font-weight: var(--bold);
+  transition: all 0.3s ease;
 }
 .header {
-  padding: 20px 0;
+  padding: var(--spacing-5) 0;
 }
 .logo {
   alt: "Memobox logo";
@@ -63,10 +69,9 @@ body {
 .date {
   display: inline;
 }
-.date :hover {
-  background-color: #000000;
+.date:hover {
+  background-color: var(--dark);
   transition: background-color 0.3s ease;
-
   color: #fff;
   transition: color 0.3s ease;
 }
@@ -199,11 +204,10 @@ hr {
 
 @media (max-width: 1023px) {
   /* To Large Screens */
+  .trend__news {
+    width: 100%;
+  }
 
-    .trend__news {
-      width: 100%;
-    }
-  
   .trend__news__container {
     flex-direction: column;
     align-items: center;
@@ -218,7 +222,7 @@ hr {
     flex-direction: column;
     width: 100%;
   }
-  .title.flex.items-center{
+  .title.flex.items-center {
     margin-top: 320px;
   }
   .swiper-wrapper div {
@@ -249,11 +253,11 @@ hr {
     height: 400px;
     width: 100%;
   }
-  .trend__news__container{
+  .trend__news__container {
     flex-direction: column;
     align-items: center;
   }
-  .title.flex.items-center{
+  .title.flex.items-center {
     margin-top: 450px;
   }
   .swiper-wrapper div {
@@ -265,7 +269,6 @@ hr {
     margin-right: 20px;
   }
 }
-
 
 @media (max-width: 767px) {
   /* Small Screens */
@@ -297,7 +300,7 @@ hr {
     width: 8px;
     height: 8px;
   }
-  .title.flex.items-center+.swiper .swiper-wrapper{
+  .title.flex.items-center + .swiper .swiper-wrapper {
     flex-direction: column;
   }
   .swiper-wrapper .news.flex {
@@ -305,7 +308,7 @@ hr {
     width: 75%;
     margin-right: 20px;
   }
-  .flex.justify-between.header a{
-    margin-right:20px ;
+  .flex.justify-between.header a {
+    margin-right: 20px;
   }
 }

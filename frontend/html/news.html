@@ -31,12 +31,65 @@
     />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/_base.css" />
-    <script src="./news/news-page.js" defer></script>
-    <script src="./news/comment-section.js" defer></script>
   </head>
   <body>
-    <news-page></news-page>
-    <script src="../js/news-page.js" type="module"></script>
-    <script src="../dist/main.js"></script>
+    <header class="container">
+      <div class="flex justify-between header">
+        <a href="index.html">
+          <img class="logo" src="../assets/images/logo.png" />
+        </a>
+        <a href="login.html" class="btn btn-secondary">Нэвтрэх</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <news-page theme="light"></news-page>
+    </main>
+
+    <footer
+      class="container"
+      style="border-top: 1px solid var(--dark); margin-top: 50px"
+    >
+      <div class="flex justify-between header">
+        <a href="index.html">
+          <img class="logo" src="../assets/images/logo.png" />
+        </a>
+        <div style="display: flex; gap: 10px; flex-direction: column">
+          <div style="display: flex; justify-items: items; gap: 10px">
+            <img
+              style="width: 20px; height: 20px"
+              src="../assets/icons/pin.svg"
+            />
+            <p style="font-size: small; font-weight: var(--semi-bold)">
+              Сүхбаатар дүүрэг 6-р хороо , бага тойруу , Ж . Самбуугийн гудамж 6
+              тоот
+            </p>
+          </div>
+          <div style="display: flex; justify-items: center; gap: 10px">
+            <img
+              style="width: 20px; height: 20px"
+              src="../assets/icons/phone.svg"
+            />
+            <p style="font-size: small; font-weight: var(--semi-bold)">
+              9909-3223
+            </p>
+          </div>
+          <div style="display: flex; justify-items: center; gap: 10px">
+            <img
+              style="width: 20px; height: 20px"
+              src="../assets/icons/mail.svg"
+            />
+            <p style="font-size: small; font-weight: var(--semi-bold)">
+              info@memobox.mn
+            </p>
+          </div>
+        </div>
+      </div>
+      <p style="font-size: small">
+        © Зохиогчийн эрх хуулиар хамгаалагдсан. Мэдээлэл хуулбарлах хориотой
+      </p>
+    </footer>
+
+    <script src="../js/news-wc.js"></script>
   </body>
 </html>
