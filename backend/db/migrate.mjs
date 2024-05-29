@@ -1,24 +1,34 @@
 import { readdir } from "fs/promises";
-import path, { join } from "path";
+import path from "path";
 import { sql } from "./postgresql.mjs";
 
 export async function runMigrations() {
   const __dirname = path.resolve(path.dirname(""));
 
-  const migrationsDir = join(__dirname, "migrations");
+  const migrationsDir = path.join(__dirname, "migrations");
   const files = await readdir(migrationsDir);
   const sortedFiles = files.sort();
 
-  for (const file of sortedFiles) {
-    const migration = await import(join(migrationsDir, file));
-    console.log(`Running migration: ${file}`);
-    await migration.up(sql);
-  }
+  try {
+    await sql`
+      CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+    `;
 
-  console.log("All migrations have been run.");
+    for (const file of sortedFiles) {
+      try {
+        const migration = await import(path.join(migrationsDir, file));
+        console.log(`Running migration: ${file}`);
+        await migration.up(sql);
+      } catch (error) {
+        console.error(`Error running migration ${file}:`, error);
+      }
+    }
+
+    console.log("All migrations have been run.");
+  } catch (error) {
+    console.error("Error running migrations:", error);
+    process.exit(1);
+  }
 }
 
-runMigrations().catch((error) => {
-  console.error("Error running migrations:", error);
-  process.exit(1);
-});
+runMigrations();
