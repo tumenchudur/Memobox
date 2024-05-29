@@ -1,7 +1,5 @@
 import dbUser from "../db/db_user.mjs";
 import fetch from "node-fetch";
-import fs from "fs";
-import jose from "node-jose";
 
 class UserController {
   async login(req, res) {
@@ -71,46 +69,17 @@ class UserController {
         return res.status(400).send({ error: "Нэг удаагийн код буруу байна." });
       }
 
-      const JWKeys = fs.readFileSync("Keys.json");
-      const keyStore = await jose.JWK.asKeyStore(JWKeys.toString());
-      const [key] = keyStore.all({ use: "sig" });
-      const opt = { compact: true, jwk: key, fields: { typ: "jwt" } };
+      const sid = Math.random().toString(36).substring(2);
+      const sessionExpire = new Date(Date.now() + 24 * 60 * 60 * 1000);
 
-      const payload = JSON.stringify({
-        exp: Math.floor(Date.now() / 1000) + 86400,
-        iat: Math.floor(Date.now() / 1000),
-        claims: {
-          id: user.id,
-          phone: user.phone,
-        },
+      await dbUser.createSession(user.id, sid, sessionExpire);
+      res.cookie("session_token", sid, {
+        httpOnly: true,
+        expires: sessionExpire,
       });
-
-      const token = await jose.JWS.createSign(opt, key)
-        .update(payload, "utf8")
-        .final();
-
-      res.status(200).send({
-        accessToken: token,
+      res.send({
+        message: "OTP verified successfully",
         phone: user.phone,
-      });
-    } catch (error) {
-      res.status(500).send({ error: "Internal Server Error" });
-    }
-  }
-
-  async me(req, res) {
-    const { user } = req;
-
-    try {
-      const existUser = await dbUser.findUserByPhone(user.claims.phone);
-
-      if (!existUser) {
-        return res.status(404).send({ error: "User not found" });
-      }
-
-      res.status(200).send({
-        id: existUser.id,
-        phone: existUser.phone,
       });
     } catch (error) {
       res.status(500).send({ error: "Internal Server Error" });

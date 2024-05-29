@@ -38,6 +38,12 @@ class DbUser {
       console.error("Error updating user:", error);
     }
   }
+  async createSession(userId, sessionToken, sessionExpire) {
+    await sql`
+      INSERT INTO sessions (user_id, session_token, expires_at)
+      VALUES (${userId}, ${sessionToken}, ${sessionExpire})
+    `;
+  }
 }
 
 const dbUser = new DbUser();
