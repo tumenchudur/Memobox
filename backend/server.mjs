@@ -4,6 +4,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import userController from "./routes/user.mjs";
 import { checkDatabaseConnection } from "./db/postgresql.mjs";
+import cors from "cors";
 // import { runMigrations } from "./db/migrate.mjs";
 
 const app = express();
@@ -16,6 +17,7 @@ const options = {
 
 app.use(cookieParser());
 app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Works fine!");
